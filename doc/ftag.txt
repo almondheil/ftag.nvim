@@ -1,0 +1,44 @@
+                                                            *Ftag.nvim.toggle()*
+                              `Ftag.nvim.toggle`()
+Toggle the plugin by calling the `enable`/`disable` methods respectively.
+
+------------------------------------------------------------------------------
+                                                            *Ftag.nvim.enable()*
+                          `Ftag.nvim.enable`({scope})
+Initializes the plugin, sets event listeners and internal state.
+
+------------------------------------------------------------------------------
+                                                           *Ftag.nvim.disable()*
+                             `Ftag.nvim.disable`()
+Disables the plugin, clear highlight groups and autocmds, closes side buffers and resets the internal state.
+
+
+==============================================================================
+------------------------------------------------------------------------------
+                                                             *Ftag.nvim.options*
+                              `Ftag.nvim.options`
+Ftag.nvim configuration with its default values.
+
+Type ~
+`(table)`
+Default values:
+>lua
+  Ftag.nvim.options = {
+      -- Prints useful logs about what event are triggered, and reasons actions are executed.
+      debug = false,
+  }
+
+<
+------------------------------------------------------------------------------
+                                                             *Ftag.nvim.setup()*
+                          `Ftag.nvim.setup`({options})
+Define your ftag.nvim setup.
+
+Parameters ~
+{options} `(table)` Module config table. See |Ftag.nvim.options|.
+
+Usage ~
+`require("ftag.nvim").setup()` (add `{}` with your |Ftag.nvim.options| table)
+
+
+ vim:tw=78:ts=8:noet:ft=help:norl:

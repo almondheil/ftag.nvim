@@ -1,4 +1,4 @@
-local log = require("your-plugin-name.util.log")
+local log = require("ftag.nvim.util.log")
 
 local state = { enabled = false }
 
@@ -9,13 +9,13 @@ function state:init()
     self.enabled = false
 end
 
----Saves the state in the global _G.YourPluginName.state object.
+---Saves the state in the global _G.Ftag.nvim.state object.
 ---
 ---@private
 function state:save()
-    log.debug("state.save", "saving state globally to _G.YourPluginName.state")
+    log.debug("state.save", "saving state globally to _G.Ftag.nvim.state")
 
-    _G.YourPluginName.state = self
+    _G.Ftag.nvim.state = self
 end
 
 --- Sets the global state as enabled.
@@ -32,7 +32,7 @@ function state:set_disabled()
     self.enabled = false
 end
 
----Whether the YourPluginName is enabled or not.
+---Whether the Ftag.nvim is enabled or not.
 ---
 ---@return boolean: the `enabled` state value.
 ---@private
